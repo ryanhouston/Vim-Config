@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/ryanh/Documents/ruby/share-brew/app/views/recipe_ingredients'
+let g:netrw_dirhist_2='/home/ryanh/csi/vencorps/application/modules/administration/controllers'
+let g:netrw_dirhist_3='/home/ryanh/csi/vencorps/application/modules/administration'
+let g:netrw_dirhist_4='/home/ryanh/Documents/ruby/share-brew/app/models/beer_xml'
+let g:netrw_dirhist_5='/mnt/storage/home/rhouston'
+let g:netrw_dirhist_6='/mnt/storage/home/rhouston/workspace'
+let g:netrw_dirhist_7='/mnt/storage/home/rhouston/workspace/muco'
+let g:netrw_dirhist_8='/mnt/storage/home/rhouston/workspace/muco/public_html/js'
