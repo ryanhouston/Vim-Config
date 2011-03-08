@@ -45,7 +45,7 @@ set ignorecase		" Do case insensitive matching
 set smartcase		" Do smart case matching
 set incsearch		" Incremental search
 set autowrite		" Automatically save before commands like :next and :make
-set hidden             " Hide buffers when they are abandoned
+"set hidden             " Hide buffers when they are abandoned
 set title
 set scrolloff=3
 set tabstop=4
@@ -109,10 +109,10 @@ nmap <F9> :bel :sp<CR>:ConqueTerm bash<CR>
 let ConqueTerm_CloseOnEnd=1
 "let ConqueTerm_InsertOnEnter=1
 
-set term=gnome-256color
+set t_Co=256
 colorscheme railscasts
 set mouse=a		" Enable mouse usage (all modes)
-set ttymouse=xterm2
+"set ttymouse=xterm2
 
 " Quit if NERDTree is the only buffer open
 function! NERDTreeQuit()
@@ -139,4 +139,6 @@ function! NERDTreeQuit()
 endfunction
 autocmd WinEnter * call NERDTreeQuit()
 
+" Command-T Options
 let mapleader = ","
+let g:CommandTAcceptSelectionSplitMap='<C-o>'
