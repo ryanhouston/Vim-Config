@@ -49,6 +49,7 @@ set hidden             " Hide buffers when they are abandoned
 set title
 set scrolloff=3
 set tabstop=2
+set expandtab
 "set number"
 set numberwidth=4
 nmap <C-N><C-N> :set invnumber<CR>
