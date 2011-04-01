@@ -48,7 +48,7 @@ set autowrite		" Automatically save before commands like :next and :make
 set hidden             " Hide buffers when they are abandoned
 set title
 set scrolloff=3
-set tabstop=4
+set tabstop=2
 "set number"
 set numberwidth=4
 nmap <C-N><C-N> :set invnumber<CR>
