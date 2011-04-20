@@ -76,7 +76,7 @@ set foldmethod=indent
 set foldnestmax=20
 set foldenable
 set foldlevel=10
-set foldcolumn=5
+set foldcolumn=0
 
 "highlight ExtraWhitespace ctermbg=red guibg=red
 "match ExtraWhitespace /\s\+$/
@@ -84,7 +84,7 @@ set foldcolumn=5
 "autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 "autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 
-"autocmd BufWritePre * :%s/\s\+$//e
+autocmd BufWritePre * :%s/\s\+$//e
 
 "Tab Navigation
 map <C-S-tab> :tabprevious<CR>
