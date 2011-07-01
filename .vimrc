@@ -39,20 +39,23 @@ endif
 
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
+set exrc        " enable per-directory .vimrc files
+set secure      " disable unsafe commands in local .vimrc files
 set showcmd		" Show (partial) command in status line.
-set showmatch		" Show matching brackets.
-set ignorecase		" Do case insensitive matching
-set smartcase		" Do smart case matching
-set incsearch		" Incremental search
-set autowrite		" Automatically save before commands like :next and :make
-"set hidden             " Hide buffers when they are abandoned
+set showmatch	" Show matching brackets.
+set ignorecase	" Do case insensitive matching
+set smartcase	" Do smart case matching
+set incsearch	" Incremental search
+set autowrite	" Automatically save before commands like :next and :make
+"set hidden     " Hide buffers when they are abandoned
 set title
 set scrolloff=3
 set tabstop=2
 set expandtab
-"set number"
+set number
 set numberwidth=4
-nmap <C-N><C-N> :set invnumber<CR>
+let mapleader = ","
+nmap <Leader>n :set number! :set number?<CR>
 
 " taglist settings
 nmap <F5> :TlistToggle<CR>
@@ -78,14 +81,14 @@ set foldnestmax=20
 set foldenable
 set foldlevel=10
 set foldcolumn=0
-
+set guifont=Monaco\ 8
 "highlight ExtraWhitespace ctermbg=red guibg=red
 "match ExtraWhitespace /\s\+$/
 "autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 "autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 "autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 
-autocmd BufWritePre * :%s/\s\+$//e
+"autocmd BufWritePre * :%s/\s\+$//e
 
 "Tab Navigation
 map <C-S-tab> :tabprevious<CR>
@@ -93,7 +96,7 @@ map <C-tab> :tabnext<CR>
 map <C-t> :tabnew<CR>
 
 "NERDTree Options
-nmap <F2> :NERDTreeToggle<CR>
+nmap <Leader>f :NERDTreeToggle<CR>
 nmap <F3> :NERDTreeMirror<CR>
 nmap ntf :NERDTreeFind<CR>
 let NERDTreeShowBookmarks=1
@@ -110,8 +113,13 @@ nmap <F9> :bel :sp<CR>:ConqueTerm bash<CR>
 let ConqueTerm_CloseOnEnd=1
 "let ConqueTerm_InsertOnEnter=1
 
-set t_Co=256
-colorscheme railscasts
+if $COLORTERM == 'gnome-terminal' 
+    set term=xterm-256color 
+    colorscheme railscasts2
+else 
+    colorscheme default 
+endif 
+
 set mouse=a		" Enable mouse usage (all modes)
 "set ttymouse=xterm2
 
@@ -141,5 +149,4 @@ endfunction
 autocmd WinEnter * call NERDTreeQuit()
 
 " Command-T Options
-let mapleader = ","
 let g:CommandTAcceptSelectionSplitMap='<C-o>'
