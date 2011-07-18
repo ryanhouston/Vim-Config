@@ -47,6 +47,7 @@ set ignorecase	" Do case insensitive matching
 set smartcase	" Do smart case matching
 set incsearch	" Incremental search
 set autowrite	" Automatically save before commands like :next and :make
+set ruler
 "set hidden     " Hide buffers when they are abandoned
 set title
 set scrolloff=3
@@ -82,11 +83,7 @@ set foldenable
 set foldlevel=10
 set foldcolumn=0
 set guifont=Monaco\ 8
-"highlight ExtraWhitespace ctermbg=red guibg=red
-"match ExtraWhitespace /\s\+$/
-"autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-"autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-"autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+
 
 "autocmd BufWritePre * :%s/\s\+$//e
 
@@ -119,6 +116,13 @@ if $COLORTERM == 'gnome-terminal'
 else 
     colorscheme default 
 endif 
+
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
 
 set mouse=a		" Enable mouse usage (all modes)
 "set ttymouse=xterm2
