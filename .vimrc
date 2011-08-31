@@ -51,19 +51,18 @@ set ruler
 "set hidden     " Hide buffers when they are abandoned
 set title
 set scrolloff=3
-set tabstop=2
+set tabstop=4
 set expandtab
 set number
 set numberwidth=4
 let mapleader = ","
 nmap <Leader>n :set number! :set number?<CR>
 
-" taglist settings
-nmap <F5> :TlistToggle<CR>
-let Tlist_Sort_Type = "name"
-let Tlist_Auto_Highlight_Tag=1
-let Tlist_Show_One_File=1
-let Tlist_Use_Right_Window=1
+" tagbar settings
+let g:tagbar_usearrows = 1
+nnoremap <leader>l :TagbarToggle<CR>
+map <C-MiddleMouse> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+
 
 " File Explorer settings
 let treeExplVertical=1
@@ -83,9 +82,12 @@ set foldenable
 set foldlevel=10
 set foldcolumn=0
 set guifont=Monaco\ 8
+set statusline=%{fugitive#statusline()}:\ %F\ %=[%c,%l]\ (%P)
+set autoread
 
-
-"autocmd BufWritePre * :%s/\s\+$//e
+"Cut'n'Paste to system clipboard
+noremap <C-S-c> "+y<CR>
+"map <C-S-v> "+p
 
 "Tab Navigation
 map <C-S-tab> :tabprevious<CR>
@@ -98,6 +100,7 @@ nmap <F3> :NERDTreeMirror<CR>
 nmap ntf :NERDTreeFind<CR>
 let NERDTreeShowBookmarks=1
 let NERDTreeShowHidden=1
+let NERDTreeWinSize=25
 " Start NERDTree with VIM automagically
 autocmd VimEnter * NERDTree
 autocmd BufEnter * NERDTreeMirror
@@ -123,6 +126,10 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+
+set colorcolumn=80,120
+"hi ColorColumn ctermbg=black
+"hi ColorColumn guibg=black
 
 set mouse=a		" Enable mouse usage (all modes)
 "set ttymouse=xterm2
