@@ -15,6 +15,8 @@ runtime! debian.vim
 " options, so any other options should be set AFTER setting 'compatible'.
 "set compatible
 
+call pathogen#infect()
+
 " Vim5 and later versions support syntax highlighting. Uncommenting the
 " following enables syntax highlighting by default.
 if has("syntax")
@@ -51,7 +53,7 @@ set ruler
 "set hidden     " Hide buffers when they are abandoned
 set title
 set scrolloff=3
-set tabstop=4
+set tabstop=2
 set expandtab
 set number
 set numberwidth=4
@@ -63,13 +65,6 @@ let g:tagbar_usearrows = 1
 nnoremap <leader>l :TagbarToggle<CR>
 map <C-MiddleMouse> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
-
-" File Explorer settings
-let treeExplVertical=1
-let treeExplWinSize=35
-let treeExplrDirSort=1
-let treeExplNoList=1
-"nmap <F2> :VSTreeExplore<CR>
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
@@ -132,7 +127,6 @@ set colorcolumn=80,120
 "hi ColorColumn guibg=black
 
 set mouse=a		" Enable mouse usage (all modes)
-"set ttymouse=xterm2
 
 " Quit if NERDTree is the only buffer open
 function! NERDTreeQuit()
