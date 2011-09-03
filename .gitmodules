@@ -1,0 +1,19 @@
+[submodule "bundle/command-t"]
+  path = bundle/command-t
+  url  = git://github.com/wincent/Command-T
+
+[submodule "bundle/nerdtree"]
+  path = bundle/nerdtree
+  url  = git://github.com/scrooloose/nerdtree
+
+[submodule "bundle/rails.vim"]
+  path = bundle/rails.vim
+  url  = git://github.com/vim-scripts/rails.vim
+
+[submodule "bundle/tagbar"]
+  path = bundle/tagbar
+  url  = git://github.com/majutsushi/tagbar
+
+[submodule "bundle/vim-fugitive"]
+  path = bundle/vim-fugitive
+  url  = git://github.com/tpope/vim-fugitive
