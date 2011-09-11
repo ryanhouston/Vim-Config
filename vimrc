@@ -5,6 +5,7 @@ runtime! debian.vim
 set nocompatible
 
 call pathogen#infect()
+call pathogen#helptags()
 
 " Vim5 and later versions support syntax highlighting. Uncommenting the
 " following enables syntax highlighting by default.
