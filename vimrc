@@ -89,7 +89,7 @@ autocmd VimEnter * wincmd p
 "ConqueTerm
 nmap <F9> :bel :sp<CR>:ConqueTerm bash<CR>
 let ConqueTerm_CloseOnEnd=1
-"let ConqueTerm_InsertOnEnter=1
+let ConqueTerm_InsertOnEnter=1
 
 if $COLORTERM == 'gnome-terminal' 
     set term=xterm-256color 
