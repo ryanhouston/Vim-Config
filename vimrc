@@ -64,7 +64,7 @@ set autoread
 
 "Cut'n'Paste to system clipboard
 noremap <C-S-c> "+y<CR>
-"map <C-S-v> "+p
+noremap <C-S-v> "+p<CR>
 
 
 "Tab Navigation
@@ -91,12 +91,12 @@ nmap <F9> :bel :sp<CR>:ConqueTerm bash<CR>
 let ConqueTerm_CloseOnEnd=1
 let ConqueTerm_InsertOnEnter=1
 
-if $COLORTERM == 'gnome-terminal' 
-    set term=xterm-256color 
+if $COLORTERM == 'gnome-terminal'
+    set term=xterm-256color
     colorscheme railscasts2
-else 
-    colorscheme default 
-endif 
+else
+    colorscheme default
+endif
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
