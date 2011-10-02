@@ -63,8 +63,8 @@ set statusline=%{fugitive#statusline()}:\ %F\ %=[%c,%l]\ (%P)
 set autoread
 
 "Cut'n'Paste to system clipboard
-noremap <C-S-c> "+y<CR>
-noremap <C-S-v> "+p<CR>
+noremap <C-s-c> "+y
+"noremap <C-S-v> "+p<CR>
 
 
 "Tab Navigation
