@@ -35,6 +35,7 @@ set hlsearch  " Highlight matching search terms
 set title
 set scrolloff=3
 set tabstop=2
+set shiftwidth=2
 set expandtab
 
 " make uses real tabs
@@ -51,6 +52,7 @@ let g:tagbar_usearrows = 1
 nnoremap <leader>l :TagbarToggle<CR>
 map <C-MiddleMouse> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 nmap <Leader>j :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+nmap <C-\> :pop<CR>
 
 set foldmethod=indent
 set foldnestmax=20
@@ -63,8 +65,8 @@ set statusline=%{fugitive#statusline()}:\ %F\ %=[%c,%l]\ (%P)
 set autoread
 
 "Cut'n'Paste to system clipboard
-noremap <C-S-c> "+y<CR>
-noremap <C-S-v> "+p<CR>
+noremap <C-S-c> "+y
+"noremap <C-S-v> "+p<CR>
 
 
 "Tab Navigation
