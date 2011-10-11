@@ -36,10 +36,14 @@ set title
 set scrolloff=3
 set tabstop=2
 set shiftwidth=2
+set softtabstop=2
 set expandtab
 
-" make uses real tabs
+" Makefile uses real tabs
 au FileType make set noexpandtab
+
+" Turn on Spell check
+setlocal spell spelllang=en_us
 
 set ruler
 set number
