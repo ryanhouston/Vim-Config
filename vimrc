@@ -85,6 +85,8 @@ nmap ntf :NERDTreeFind<CR>
 let NERDTreeShowBookmarks=1
 let NERDTreeShowHidden=1
 let NERDTreeWinSize=25
+let NERDTreeWinPos="right"
+let NERDTreeDirArrows=1
 " Start NERDTree with VIM automagically
 autocmd VimEnter * NERDTree
 autocmd BufEnter * NERDTreeMirror
