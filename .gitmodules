@@ -26,4 +26,4 @@
 	url = git://github.com/tpope/vim-cucumber.git
 [submodule "bundle/obviousmode"]
 	path = bundle/obviousmode
-	url = https://github.com/bsl/obviousmode
+	url = git://github.com/bsl/obviousmode
