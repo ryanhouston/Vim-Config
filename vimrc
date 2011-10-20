@@ -113,6 +113,10 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
+" Visualize tabs and trailing spaces
+set list
+set listchars=tab:>-,trail:-
+
 set colorcolumn=80,120
 "hi ColorColumn ctermbg=black
 "hi ColorColumn guibg=black
