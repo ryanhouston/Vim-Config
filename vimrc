@@ -43,7 +43,7 @@ set expandtab
 au FileType make set noexpandtab
 
 " Turn on Spell check
-setlocal spell spelllang=en_us
+"setlocal spell spelllang=en_us
 
 set ruler
 set number
@@ -82,7 +82,7 @@ map <C-t> :tabnew<CR>
 nmap <Leader>f :NERDTreeToggle<CR>
 nmap <F3> :NERDTreeMirror<CR>
 nmap ntf :NERDTreeFind<CR>
-let NERDTreeShowBookmarks=1
+"let NERDTreeShowBookmarks=1
 let NERDTreeShowHidden=1
 let NERDTreeWinSize=25
 let NERDTreeWinPos="right"
@@ -106,7 +106,7 @@ else
     colorscheme default
 endif
 
-highlight ExtraWhitespace ctermbg=red guibg=red
+highlight ExtraWhitespace ctermbg=red guibg=purple
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
