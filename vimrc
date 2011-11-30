@@ -60,7 +60,7 @@ nmap <C-\> :pop<CR>
 
 set foldmethod=indent
 set foldnestmax=20
-set foldenable
+"set foldenable
 set foldlevel=10
 set foldcolumn=0
 
