@@ -64,7 +64,6 @@ set foldnestmax=20
 set foldlevel=10
 set foldcolumn=0
 
-set guifont=Monaco\ 8
 set statusline=%{fugitive#statusline()}:\ %F\ %=[%c,%l]\ (%P)
 set autoread
 
