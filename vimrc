@@ -51,6 +51,8 @@ set numberwidth=4
 let mapleader = ","
 nmap <Leader>n :set number! :set number?<CR>
 
+set guifont=Ubuntu\ Mono\ 9
+
 " tagbar settings
 let g:tagbar_usearrows = 1
 nnoremap <leader>l :TagbarToggle<CR>
