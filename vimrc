@@ -157,6 +157,9 @@ let g:CommandTMaxHeight=20
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
 
+" Powerline
+let g:Powerline_symbols='fancy'
+
 " Directories for swp files
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
