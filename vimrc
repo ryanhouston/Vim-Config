@@ -21,14 +21,14 @@ endif
 set exrc        " enable per-directory .vimrc files
 set secure      " disable unsafe commands in local .vimrc files
 
-set showcmd		  " Show (partial) command in status line.
-set showmatch	  " Show matching brackets.
-set autowrite	  " Automatically save before commands like :next and :make
+set showcmd     " Show (partial) command in status line.
+set showmatch   " Show matching brackets.
+set autowrite   " Automatically save before commands like :next and :make
 
 " Searching
-set ignorecase	" Do case insensitive matching
-set smartcase	" Do smart case matching
-set incsearch	" Incremental search
+set ignorecase " Do case insensitive matching
+set smartcase " Do smart case matching
+set incsearch " Incremental search
 set hlsearch  " Highlight matching search terms
 
 "set hidden     " Hide buffers when they are abandoned
@@ -122,7 +122,7 @@ set colorcolumn=80,120
 "hi ColorColumn ctermbg=black
 "hi ColorColumn guibg=black
 
-set mouse=a		" Enable mouse usage (all modes)
+set mouse=a   " Enable mouse usage (all modes)
 
 " Quit if NERDTree is the only buffer open
 function! NERDTreeQuit()
@@ -156,6 +156,9 @@ let g:CommandTMaxHeight=20
 " Gist Options
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
+
+" Powerline
+let g:Powerline_symbols='fancy'
 
 " Directories for swp files
 set backupdir=~/.vim/backup
