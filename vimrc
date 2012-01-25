@@ -86,13 +86,13 @@ nmap ntf :NERDTreeFind<CR>
 "let NERDTreeShowBookmarks=1
 let NERDTreeShowHidden=1
 let NERDTreeWinSize=25
-let NERDTreeWinPos="right"
+"let NERDTreeWinPos="right"
 let NERDTreeDirArrows=1
 " Start NERDTree with VIM automagically
-autocmd VimEnter * NERDTree
-autocmd BufEnter * NERDTreeMirror
+"autocmd VimEnter * NERDTree
+"autocmd BufEnter * NERDTreeMirror
 " Do not leave cursor in NERDTree buffer
-autocmd VimEnter * wincmd p
+"autocmd VimEnter * wincmd p
 
 
 "ConqueTerm
@@ -101,7 +101,7 @@ let ConqueTerm_CloseOnEnd=1
 let ConqueTerm_InsertOnEnter=1
 
 if $COLORTERM == 'gnome-terminal'
-    set term=xterm-256color
+    set term=screen-256color
     colorscheme railscasts2
 else
     colorscheme default
