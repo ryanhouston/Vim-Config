@@ -66,7 +66,7 @@ set foldnestmax=20
 set foldlevel=10
 set foldcolumn=0
 
-set statusline=%{fugitive#statusline()}:\ %F\ %=[%c,%l]\ (%P)
+"set statusline=%{fugitive#statusline()}:\ %F\ %=[%c,%l]\ (%P)
 set autoread
 
 "Cut'n'Paste to system clipboard
@@ -119,8 +119,8 @@ set list
 set listchars=tab:>-,trail:-
 
 set colorcolumn=80,120
-"hi ColorColumn ctermbg=black
-"hi ColorColumn guibg=black
+set showtabline=2
+hi TabLine guifg=black
 
 set mouse=a   " Enable mouse usage (all modes)
 
