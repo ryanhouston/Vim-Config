@@ -18,6 +18,9 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
+filetype plugin on
+set cursorline
+
 set exrc        " enable per-directory .vimrc files
 set secure      " disable unsafe commands in local .vimrc files
 
@@ -60,11 +63,12 @@ map <C-MiddleMouse> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 nmap <Leader>j :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 nmap <C-\> :pop<CR>
 
-set foldmethod=indent
-set foldnestmax=20
+" Fold settings
+"set foldmethod=indent
+"set foldnestmax=20
 "set foldenable
-set foldlevel=10
-set foldcolumn=0
+"set foldlevel=10
+"set foldcolumn=0
 
 "set statusline=%{fugitive#statusline()}:\ %F\ %=[%c,%l]\ (%P)
 set autoread
@@ -75,30 +79,17 @@ noremap <C-S-c> "+y
 
 
 "Tab Navigation
-map <C-S-tab> :tabprevious<CR>
-map <C-tab> :tabnext<CR>
 map <C-t> :tabnew<CR>
 
 "NERDTree Options
 nmap <Leader>f :NERDTreeToggle<CR>
 nmap <F3> :NERDTreeMirror<CR>
 nmap ntf :NERDTreeFind<CR>
-"let NERDTreeShowBookmarks=1
 let NERDTreeShowHidden=1
 let NERDTreeWinSize=25
 "let NERDTreeWinPos="right"
 let NERDTreeDirArrows=1
-" Start NERDTree with VIM automagically
-"autocmd VimEnter * NERDTree
-"autocmd BufEnter * NERDTreeMirror
-" Do not leave cursor in NERDTree buffer
-"autocmd VimEnter * wincmd p
 
-
-"ConqueTerm
-nmap <F9> :bel :sp<CR>:ConqueTerm bash<CR>
-let ConqueTerm_CloseOnEnd=1
-let ConqueTerm_InsertOnEnter=1
 
 if $COLORTERM == 'gnome-terminal'
     set term=screen-256color
@@ -118,7 +109,13 @@ autocmd BufWinLeave * call clearmatches()
 set list
 set listchars=tab:>-,trail:-
 
+" Mark column widths
 set colorcolumn=80,120
+
+" Status bar
+set laststatus=2
+
+" Always show the tabs and make inactive tab text easier to see
 set showtabline=2
 hi TabLine guifg=black
 
@@ -164,9 +161,6 @@ let g:Powerline_symbols='fancy'
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
-" Status bar
-set laststatus=2
-
 " add json syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript
 
@@ -179,11 +173,11 @@ if filereadable("/etc/vim/vimrc.local")
 endif
 
 " Experiment w/ disabled arrow keys
-inoremap  <Up>     <NOP>
-inoremap  <Down>   <NOP>
-inoremap  <Left>   <NOP>
-inoremap  <Right>  <NOP>
-noremap   <Up>     <NOP>
-noremap   <Down>   <NOP>
-noremap   <Left>   <NOP>
-noremap   <Right>  <NOP>
+inoremap  <Up>     :echo "no!"<cr>
+inoremap  <Down>   :echo "no!"<cr>
+inoremap  <Left>   :echo "no!"<cr>
+inoremap  <Right>  :echo "no!"<cr>
+noremap   <Up>     :echo "no!"<cr>
+noremap   <Down>   :echo "no!"<cr>
+noremap   <Left>   :echo "no!"<cr>
+noremap   <Right>  :echo "no!"<cr>
