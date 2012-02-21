@@ -7,6 +7,11 @@ set nocompatible
 call pathogen#infect()
 call pathogen#helptags()
 
+" Source a global configuration file if available
+if filereadable("/etc/vim/vimrc.local")
+  source /etc/vim/vimrc.local
+endif
+
 " Vim5 and later versions support syntax highlighting. Uncommenting the
 " following enables syntax highlighting by default.
 if has("syntax")
@@ -19,8 +24,8 @@ if has("autocmd")
 endif
 
 filetype plugin on
-set cursorline
 
+set cursorline
 set exrc        " enable per-directory .vimrc files
 set secure      " disable unsafe commands in local .vimrc files
 
@@ -141,11 +146,6 @@ au BufNewFile,BufRead *.json set ft=javascript
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-
-" Source a global configuration file if available
-if filereadable("/etc/vim/vimrc.local")
-  source /etc/vim/vimrc.local
-endif
 
 " Experiment w/ disabled arrow keys
 inoremap  <Up>     :echo "no!"<cr>
