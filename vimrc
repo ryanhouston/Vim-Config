@@ -11,6 +11,10 @@ call pathogen#helptags()
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
+"
+" Directories for swp files
+set backupdir=~/.vim/backup
+set directory=~/.vim/backup
 
 " Vim5 and later versions support syntax highlighting. Uncommenting the
 " following enables syntax highlighting by default.
@@ -50,9 +54,13 @@ set expandtab
 " Makefile uses real tabs
 au FileType make set noexpandtab
 
-" Turn on Spell check
-"setlocal spell spelllang=en_us
+" add json syntax highlighting
+au BufNewFile,BufRead *.json set ft=javascript
 
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+" Line numbers
 set ruler
 set number
 set numberwidth=4
@@ -75,13 +83,7 @@ nmap <C-\> :pop<CR>
 "set foldlevel=10
 "set foldcolumn=0
 
-"set statusline=%{fugitive#statusline()}:\ %F\ %=[%c,%l]\ (%P)
 set autoread
-
-"Cut'n'Paste to system clipboard
-noremap <C-S-c> "+y
-"noremap <C-S-v> "+p<CR>
-
 
 "Tab Navigation
 map <C-t> :tabnew<CR>
@@ -92,7 +94,6 @@ nmap <F3> :NERDTreeMirror<CR>
 nmap ntf :NERDTreeFind<CR>
 let NERDTreeShowHidden=1
 let NERDTreeWinSize=25
-"let NERDTreeWinPos="right"
 let NERDTreeDirArrows=1
 
 
@@ -126,27 +127,6 @@ hi TabLine guifg=black
 
 set mouse=a   " Enable mouse usage (all modes)
 
-" Command-T Options
-let g:CommandTAcceptSelectionSplitMap='<C-o>'
-let g:CommandTMaxHeight=20
-
-" Gist Options
-let g:gist_detect_filetype = 1
-let g:gist_open_browser_after_post = 1
-
-" Powerline
-let g:Powerline_symbols='fancy'
-
-" Directories for swp files
-set backupdir=~/.vim/backup
-set directory=~/.vim/backup
-
-" add json syntax highlighting
-au BufNewFile,BufRead *.json set ft=javascript
-
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
-
 " Experiment w/ disabled arrow keys
 inoremap  <Up>     :echo "no!"<cr>
 inoremap  <Down>   :echo "no!"<cr>
@@ -156,3 +136,11 @@ noremap   <Up>     :echo "no!"<cr>
 noremap   <Down>   :echo "no!"<cr>
 noremap   <Left>   :echo "no!"<cr>
 noremap   <Right>  :echo "no!"<cr>
+"
+" Gist Options
+let g:gist_detect_filetype = 1
+let g:gist_open_browser_after_post = 1
+
+" Powerline
+let g:Powerline_symbols='fancy'
+
