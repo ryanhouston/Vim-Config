@@ -88,14 +88,6 @@ set autoread
 "Tab Navigation
 map <C-t> :tabnew<CR>
 
-"NERDTree Options
-nmap <Leader>f :NERDTreeToggle<CR>
-nmap <F3> :NERDTreeMirror<CR>
-nmap ntf :NERDTreeFind<CR>
-let NERDTreeShowHidden=1
-let NERDTreeWinSize=25
-let NERDTreeDirArrows=1
-
 
 if $COLORTERM == 'gnome-terminal'
     set term=screen-256color
@@ -144,3 +136,13 @@ let g:gist_open_browser_after_post = 1
 " Powerline
 let g:Powerline_symbols='fancy'
 
+"NERDTree Options
+nmap <Leader>f :NERDTreeToggle<CR>
+nmap <F3> :NERDTreeMirror<CR>
+nmap ntf :NERDTreeFind<CR>
+let NERDTreeShowHidden=1
+let NERDTreeWinSize=25
+let NERDTreeDirArrows=1
+
+" Start CtrlP like Command-T
+nmap <Leader>t :CtrlP<CR>
