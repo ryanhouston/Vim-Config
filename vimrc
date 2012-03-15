@@ -89,12 +89,15 @@ set autoread
 map <C-t> :tabnew<CR>
 
 
+set background=dark
 if $COLORTERM == 'gnome-terminal'
     set term=screen-256color
     colorscheme railscasts2
+    colorscheme wombat
 else
     colorscheme default
 endif
+
 
 highlight ExtraWhitespace ctermbg=red guibg=purple
 match ExtraWhitespace /\s\+$/
@@ -108,6 +111,7 @@ set list
 set listchars=tab:>-,trail:-
 
 " Mark column widths
+hi ColorColumn                guibg=#333435
 set colorcolumn=80,120
 
 " Status bar
