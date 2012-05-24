@@ -54,8 +54,9 @@ set expandtab
 " Makefile uses real tabs
 au FileType make set noexpandtab
 
-" add json syntax highlighting
+" Set extra filetype extensions
 au BufNewFile,BufRead *.json set ft=javascript
+au BufNewFile,BufRead *.md set ft=markdown
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
