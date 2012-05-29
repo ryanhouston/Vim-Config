@@ -124,12 +124,12 @@ hi TabLine guifg=black
 set mouse=a   " Enable mouse usage (all modes)
 
 " Experiment w/ disabled arrow keys
-inoremap  <Up>     :echo "no!"<cr>
-inoremap  <Down>   :echo "no!"<cr>
+inoremap  <Up>     gk
+inoremap  <Down>   gj
 inoremap  <Left>   :echo "no!"<cr>
 inoremap  <Right>  :echo "no!"<cr>
-noremap   <Up>     :echo "no!"<cr>
-noremap   <Down>   :echo "no!"<cr>
+noremap   <Up>     gk
+noremap   <Down>   gj
 noremap   <Left>   :echo "no!"<cr>
 noremap   <Right>  :echo "no!"<cr>
 "
