@@ -150,4 +150,7 @@ let NERDTreeWinSize=25
 let NERDTreeDirArrows=1
 
 " Start CtrlP like Command-T
-nmap <Leader>t :CtrlP<CR>
+let g:ctrlp_map = '<Leader>t'
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+
