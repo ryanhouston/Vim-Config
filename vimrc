@@ -127,12 +127,8 @@ set mouse=a   " Enable mouse usage (all modes)
 " Experiment w/ disabled arrow keys
 inoremap  <Up>     gk
 inoremap  <Down>   gj
-inoremap  <Left>   :echo "no!"<cr>
-inoremap  <Right>  :echo "no!"<cr>
 noremap   <Up>     gk
 noremap   <Down>   gj
-noremap   <Left>   :echo "no!"<cr>
-noremap   <Right>  :echo "no!"<cr>
 "
 " Gist Options
 let g:gist_detect_filetype = 1
