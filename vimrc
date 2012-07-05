@@ -67,6 +67,8 @@ set number
 set numberwidth=4
 let mapleader = ","
 nmap <Leader>n :set number! :set number?<CR>
+nnoremap <leader><leader> <c-^>
+
 
 set guifont=Ubuntu\ Mono\ 9
 
