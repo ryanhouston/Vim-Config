@@ -141,14 +141,6 @@ let g:gist_open_browser_after_post = 1
 " Powerline
 let g:Powerline_symbols='fancy'
 
-"NERDTree Options
-nmap <Leader>f :NERDTreeToggle<CR>
-nmap <F3> :NERDTreeMirror<CR>
-nmap ntf :NERDTreeFind<CR>
-let NERDTreeShowHidden=1
-let NERDTreeWinSize=25
-let NERDTreeDirArrows=1
-
 " Start CtrlP like Command-T
 let g:ctrlp_map = '<Leader>t'
 let g:ctrlp_working_path_mode = 0
