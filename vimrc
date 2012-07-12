@@ -30,11 +30,12 @@ endif
 filetype plugin on
 
 set cursorline
+set visualbell
 set exrc        " enable per-directory .vimrc files
 set secure      " disable unsafe commands in local .vimrc files
 
+set showmode
 set showcmd     " Show (partial) command in status line.
-set showmatch   " Show matching brackets.
 set autowrite   " Automatically save before commands like :next and :make
 
 " Searching
@@ -42,10 +43,15 @@ set ignorecase " Do case insensitive matching
 set smartcase " Do smart case matching
 set incsearch " Incremental search
 set hlsearch  " Highlight matching search terms
+set showmatch   " Show matching brackets.
+nnoremap <leader><space> :noh<cr>
 
 "set hidden     " Hide buffers when they are abandoned
 set title
 set scrolloff=3
+set encoding=utf8
+
+" tab settings
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
@@ -80,10 +86,10 @@ nmap <Leader>j :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 nmap <C-\> :pop<CR>
 
 " Fold settings
-"set foldmethod=indent
-"set foldnestmax=20
-"set foldenable
-"set foldlevel=10
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=10
 "set foldcolumn=0
 
 set autoread
@@ -126,12 +132,12 @@ hi TabLine guifg=black
 
 set mouse=a   " Enable mouse usage (all modes)
 
-" Experiment w/ disabled arrow keys
+" Map arrow keys for visual lines
 inoremap  <Up>     gk
 inoremap  <Down>   gj
 noremap   <Up>     gk
 noremap   <Down>   gj
-"
+
 " Gist Options
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
@@ -142,5 +148,5 @@ let g:Powerline_symbols='fancy'
 " Start CtrlP like Command-T
 let g:ctrlp_map = '<Leader>t'
 let g:ctrlp_working_path_mode = 0
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|\cache$'
 
