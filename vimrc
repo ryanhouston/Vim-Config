@@ -30,7 +30,6 @@ endif
 filetype plugin on
 
 set cursorline
-set visualbell
 set exrc        " enable per-directory .vimrc files
 set secure      " disable unsafe commands in local .vimrc files
 
@@ -102,7 +101,7 @@ set background=dark
 if $COLORTERM == 'gnome-terminal'
     set term=screen-256color
     colorscheme railscasts2
-    colorscheme wombat
+    " colorscheme wombat
 else
     colorscheme default
 endif
