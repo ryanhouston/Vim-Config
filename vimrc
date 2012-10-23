@@ -72,6 +72,9 @@ set number
 set numberwidth=4
 let mapleader = ","
 nmap <Leader>n :set number! :set number?<CR>
+nmap <Leader>rn :set relativenumber<CR>
+
+" Switch between last buffer
 nnoremap <leader><leader> <c-^>
 
 
