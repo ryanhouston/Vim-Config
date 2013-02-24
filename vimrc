@@ -49,6 +49,7 @@ nnoremap <leader><space> :noh<cr>
 set title
 set scrolloff=3
 set encoding=utf8
+set nowrap
 
 " tab settings
 set tabstop=2
