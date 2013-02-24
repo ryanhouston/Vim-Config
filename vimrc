@@ -98,7 +98,7 @@ set foldlevel=10
 set autoread
 
 "Tab Navigation
-map <C-t> :tabnew<CR>
+"map <C-t> :tabnew<CR>
 
 
 set background=dark
