@@ -43,3 +43,6 @@
 [submodule "bundle/vim-obsession"]
 	path = bundle/vim-obsession
 	url = git@github.com:tpope/vim-obsession
+[submodule "bundle/vim-dispatch"]
+	path = bundle/vim-dispatch
+	url = git://github.com/tpope/vim-dispatch.git
