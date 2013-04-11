@@ -63,6 +63,7 @@ au FileType make set noexpandtab
 " Set extra filetype extensions
 au BufNewFile,BufRead *.json set ft=javascript
 au BufNewFile,BufRead *.md set ft=markdown
+au BufRead,BufNewFile *.md setlocal textwidth=80
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
