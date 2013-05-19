@@ -137,12 +137,6 @@ hi TabLine guifg=black
 
 set mouse=a   " Enable mouse usage (all modes)
 
-" Map arrow keys for visual lines
-inoremap  <Up>     gk
-inoremap  <Down>   gj
-nnoremap   <Up>     gk
-nnoremap   <Down>   gj
-
 " Gist Options
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
