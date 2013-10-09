@@ -104,13 +104,9 @@ set autoread
 
 
 set background=dark
-if $COLORTERM == 'gnome-terminal'
-    set term=screen-256color
-    colorscheme railscasts2
-    " colorscheme wombat
-else
-    colorscheme default
-endif
+set term=screen-256color
+colorscheme railscasts2
+"colorscheme osx_like
 
 
 highlight ExtraWhitespace ctermbg=red guibg=purple
