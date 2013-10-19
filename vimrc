@@ -63,7 +63,7 @@ au FileType make set noexpandtab
 " Set extra filetype extensions
 au BufNewFile,BufRead *.json set ft=javascript
 au BufNewFile,BufRead *.md set ft=markdown
-au BufRead,BufNewFile *.md setlocal spell textwidth=80
+au FileType markdown setlocal spell textwidth=80
 au Filetype gitcommit setlocal spell textwidth=72
 
 " allow backspacing over everything in insert mode
