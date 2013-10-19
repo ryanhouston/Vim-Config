@@ -103,9 +103,12 @@ set autoread
 "map <C-t> :tabnew<CR>
 
 
-set background=dark
 set term=screen-256color
-colorscheme railscasts2
+let g:solarized_termcolors=16
+set background=dark
+colorscheme solarized
+
+"colorscheme railscasts2
 "colorscheme osx_like
 
 
