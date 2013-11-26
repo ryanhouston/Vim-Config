@@ -58,13 +58,14 @@ set softtabstop=2
 set expandtab
 
 " Makefile uses real tabs
-au FileType make set noexpandtab
+autocmd FileType make set noexpandtab
 
 " Set extra filetype extensions
-au BufNewFile,BufRead *.json set ft=javascript
-au BufNewFile,BufRead *.md set ft=markdown
-au FileType markdown setlocal spell textwidth=80
-au Filetype gitcommit setlocal spell textwidth=72
+autocmd BufNewFile,BufRead *.json set ft=javascript
+autocmd BufNewFile,BufRead *.md set ft=markdown
+autocmd FileType markdown setlocal spell textwidth=80
+autocmd Filetype cucumber setlocal spell
+autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
