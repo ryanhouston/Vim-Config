@@ -147,4 +147,5 @@ let g:Powerline_symbols='fancy'
 let g:ctrlp_map = '<Leader>t'
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|\cache$'
+let g:ctrlp_extensions = ['tag', 'buffertag']
 
