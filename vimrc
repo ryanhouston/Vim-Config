@@ -94,9 +94,8 @@ nmap <C-\> :pop<CR>
 " Fold settings
 set foldmethod=indent
 set foldnestmax=10
+set foldcolumn=4
 set nofoldenable
-set foldlevel=10
-"set foldcolumn=0
 
 set autoread
 
