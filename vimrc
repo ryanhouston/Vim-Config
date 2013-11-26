@@ -132,7 +132,8 @@ set laststatus=2
 
 " Always show the tabs and make inactive tab text easier to see
 set showtabline=2
-hi TabLine guifg=black
+hi TabLineSel ctermbg=black
+hi TabLineSel ctermfg=DarkMagenta
 
 set mouse=a   " Enable mouse usage (all modes)
 
