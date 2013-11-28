@@ -16,11 +16,8 @@ endif
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
-" Vim5 and later versions support syntax highlighting. Uncommenting the
-" following enables syntax highlighting by default.
-if has("syntax")
-  syntax on
-endif
+" Enable syntax highlighting
+syntax on
 
 " Jump to last line when the file was last loaded
 if has("autocmd")
@@ -43,7 +40,6 @@ set smartcase " Do smart case matching
 set incsearch " Incremental search
 set hlsearch  " Highlight matching search terms
 set showmatch   " Show matching brackets.
-nnoremap <leader><space> :noh<cr>
 
 "set hidden     " Hide buffers when they are abandoned
 set title
@@ -81,16 +77,6 @@ nmap <Leader>rn :set relativenumber<CR>
 " Switch between last buffer
 nnoremap <leader><leader> <c-^>
 
-
-set guifont=Ubuntu\ Mono\ 9
-
-" tagbar settings
-let g:tagbar_usearrows = 1
-nnoremap <leader>l :TagbarToggle<CR>
-map <C-MiddleMouse> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-nmap <Leader>j :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-nmap <C-\> :pop<CR>
-
 " Fold settings
 set foldmethod=indent
 set foldnestmax=10
@@ -98,10 +84,6 @@ set foldcolumn=4
 set nofoldenable
 
 set autoread
-
-"Tab Navigation
-"map <C-t> :tabnew<CR>
-
 
 set term=screen-256color
 let g:solarized_termcolors=16
@@ -111,6 +93,7 @@ colorscheme solarized
 "colorscheme railscasts2
 "colorscheme osx_like
 
+set guifont=Ubuntu\ Mono\ 9
 
 highlight ExtraWhitespace ctermbg=red guibg=purple
 match ExtraWhitespace /\s\+$/
@@ -137,6 +120,16 @@ hi TabLineSel ctermfg=DarkMagenta
 
 set mouse=a   " Enable mouse usage (all modes)
 
+" Window scrolling
+nmap <Right> z<Right>
+nmap <Left> z<Left>
+nmap <Up> <C-y>
+nmap <Down> <C-e>
+
+" tag navigation
+nmap <Leader>j :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+nmap <C-\> :pop<CR>
+
 " Gist Options
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
@@ -147,6 +140,10 @@ let g:Powerline_symbols='fancy'
 " Start CtrlP like Command-T
 let g:ctrlp_map = '<Leader>t'
 let g:ctrlp_working_path_mode = 0
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|\cache$'
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|\cache|\tmp$'
 let g:ctrlp_extensions = ['tag', 'buffertag']
+
+" tagbar settings
+let g:tagbar_usearrows = 1
+nnoremap <leader>l :TagbarToggle<CR>
 
