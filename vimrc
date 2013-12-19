@@ -110,7 +110,6 @@ set list
 set listchars=tab:>-,trail:-
 
 " Mark column widths
-hi ColorColumn                guibg=#333435
 set colorcolumn=80,120
 
 " Status bar
