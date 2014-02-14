@@ -60,6 +60,7 @@ set autoindent
 autocmd FileType make set noexpandtab
 
 " Set extra filetype extensions
+autocmd BufReadPost,BufNewFile *_spec.rb set syntax=rspec
 autocmd BufNewFile,BufRead *.json set ft=javascript
 autocmd BufNewFile,BufRead *.md set ft=markdown
 autocmd FileType markdown setlocal spell textwidth=80
