@@ -63,6 +63,7 @@ autocmd FileType make set noexpandtab
 autocmd BufReadPost,BufNewFile *_spec.rb set syntax=rspec
 autocmd BufNewFile,BufRead *.json set ft=javascript
 autocmd BufNewFile,BufRead *.md set ft=markdown
+autocmd BufNewFile,BufRead *.hamlc set ft=haml
 autocmd FileType markdown setlocal spell textwidth=80
 autocmd Filetype cucumber setlocal spell
 autocmd Filetype gitcommit setlocal spell textwidth=72
