@@ -151,3 +151,6 @@ let g:ctrlp_extensions = ['tag', 'buffertag']
 let g:tagbar_usearrows = 1
 nnoremap <leader>l :TagbarToggle<CR>
 
+" vimwiki settings
+let g:vimwiki_list = [{'path': '~/Documents/sync/wiki', 'auto_export': 1}]
+
