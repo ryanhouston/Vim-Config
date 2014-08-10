@@ -152,5 +152,17 @@ let g:tagbar_usearrows = 1
 nnoremap <leader>l :TagbarToggle<CR>
 
 " vimwiki settings
-let g:vimwiki_list = [{'path': '~/Documents/sync/wiki', 'auto_export': 1}]
+let main_wiki = {
+  \ 'path':   '~/Documents/sync/wiki/',
+  \ 'syntax': 'markdown',
+  \ 'ext':    '.md' }
+
+let culturalist_wiki = {
+  \ 'path':   '~/Documents/sync/culturalist_wiki/',
+  \ 'syntax': 'markdown',
+  \ 'ext':    '.md' }
+
+let g:vimwiki_list = [main_wiki, culturalist_wiki]
+let g:vimwiki_ext2syntax = {'.md': 'markdown'}
+
 
