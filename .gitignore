@@ -1,4 +1,6 @@
 .netrwhist
 backup/*.sw*
 bundle/*/doc/tags
+spell/*
 tags/*
+
