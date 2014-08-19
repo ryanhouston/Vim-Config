@@ -60,9 +60,7 @@ set autoindent
 autocmd FileType make set noexpandtab
 
 " Set extra filetype extensions
-"autocmd BufReadPost,BufNewFile *_spec.rb set syntax=rspec
 autocmd BufNewFile,BufRead *.json set ft=javascript
-autocmd BufNewFile,BufRead *.md set ft=markdown
 autocmd BufNewFile,BufRead *.hamlc set ft=haml
 autocmd FileType markdown setlocal spell textwidth=80
 autocmd Filetype cucumber setlocal spell
@@ -163,7 +161,9 @@ let culturalist_wiki = {
   \ 'ext':    '.md' }
 
 let g:vimwiki_list = [main_wiki, culturalist_wiki]
-let g:vimwiki_ext2syntax = {'.md': 'markdown'}
+let g:vimwiki_ext2syntax = {}
+let g:vimwiki_global_ext = 0
+
 
 " Ack.vim
 let g:ackhighlight = 1
