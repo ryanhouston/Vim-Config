@@ -61,7 +61,7 @@ autocmd FileType make set noexpandtab
 
 " Set extra filetype extensions
 autocmd BufNewFile,BufRead *.json set ft=javascript
-autocmd BufNewFile,BufRead *.hamlc set ft=haml
+autocmd BufNewFile,BufRead *.hamlc,*.hamlc.erb set ft=haml
 autocmd FileType markdown setlocal spell textwidth=80
 autocmd Filetype cucumber setlocal spell
 autocmd Filetype gitcommit setlocal spell textwidth=72
