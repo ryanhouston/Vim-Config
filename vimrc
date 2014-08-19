@@ -165,4 +165,6 @@ let culturalist_wiki = {
 let g:vimwiki_list = [main_wiki, culturalist_wiki]
 let g:vimwiki_ext2syntax = {'.md': 'markdown'}
 
+" Ack.vim
+let g:ackhighlight = 1
 
