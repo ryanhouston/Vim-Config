@@ -26,7 +26,7 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
-filetype plugin on
+filetype plugin indent on
 
 set cursorline
 set exrc        " enable per-directory .vimrc files
@@ -42,8 +42,9 @@ set smartcase " Do smart case matching
 set incsearch " Incremental search
 set hlsearch  " Highlight matching search terms
 set showmatch   " Show matching brackets.
+nmap <silent> ,/ :nohlsearch<CR>
 
-"set hidden     " Hide buffers when they are abandoned
+set hidden
 set title
 set scrolloff=3
 set encoding=utf8
@@ -55,6 +56,9 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set autoindent
+set copyindent
+
+set pastetoggle=<F2>
 
 " Makefile uses real tabs
 autocmd FileType make set noexpandtab
@@ -63,6 +67,8 @@ autocmd FileType make set noexpandtab
 autocmd BufNewFile,BufRead *.json set ft=javascript
 autocmd BufNewFile,BufRead *.hamlc,*.hamlc.erb set ft=haml
 autocmd FileType markdown setlocal spell textwidth=80
+autocmd FileType liquid setlocal spell textwidth=80
+autocmd FileType vimwiki setlocal spell textwidth=80
 autocmd Filetype cucumber setlocal spell
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
