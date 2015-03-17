@@ -43,9 +43,6 @@
 [submodule "bundle/vim-powerline"]
 	path = bundle/vim-powerline
 	url = git@github.com:Lokaltog/vim-powerline
-[submodule "bundle/colorschemes"]
-	path = bundle/colorschemes
-	url = git@github.com:flazz/vim-colorschemes.git
 [submodule "bundle/vim-haml"]
 	path = bundle/vim-haml
 	url = https://github.com/tpope/vim-haml
