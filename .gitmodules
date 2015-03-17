@@ -30,13 +30,13 @@
 	url = git://github.com/tpope/vim-bundler
 [submodule "bundle/vim-obsession"]
 	path = bundle/vim-obsession
-	url = git://github.com:tpope/vim-obsession
+	url = git://github.com/tpope/vim-obsession
 [submodule "bundle/vim-dispatch"]
 	path = bundle/vim-dispatch
 	url = git://github.com/tpope/vim-dispatch.git
 [submodule "bundle/vim-powerline"]
 	path = bundle/vim-powerline
-	url = git://github.com:Lokaltog/vim-powerline
+	url = git://github.com/Lokaltog/vim-powerline
 [submodule "bundle/vim-haml"]
 	path = bundle/vim-haml
 	url = https://github.com/tpope/vim-haml
