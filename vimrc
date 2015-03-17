@@ -142,9 +142,6 @@ nmap <C-\> :pop<CR>
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
 
-" Powerline
-let g:Powerline_symbols='fancy'
-
 " Start CtrlP like Command-T
 let g:ctrlp_map = '<Leader>t'
 let g:ctrlp_working_path_mode = 0
