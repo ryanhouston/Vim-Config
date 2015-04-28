@@ -121,11 +121,6 @@ set colorcolumn=80,120
 " Status bar
 set laststatus=2
 
-" Always show the tabs and make inactive tab text easier to see
-set showtabline=2
-hi TabLineSel ctermbg=black
-hi TabLineSel ctermfg=DarkMagenta
-
 set mouse=a   " Enable mouse usage (all modes)
 
 " Window scrolling
@@ -170,4 +165,7 @@ let g:vimwiki_global_ext = 0
 
 " Ack.vim
 let g:ackhighlight = 1
+
+" vim-airline
+let g:airline#extensions#tabline#enabled = 1
 
