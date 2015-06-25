@@ -43,3 +43,6 @@
 [submodule "bundle/vim-liquid"]
 	path = bundle/vim-liquid
 	url = https://github.com/tpope/vim-liquid
+[submodule "bundle/mustache"]
+	path = bundle/mustache
+	url = https://github.com/mustache/vim-mustache-handlebars
