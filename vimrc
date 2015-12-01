@@ -73,6 +73,7 @@ autocmd FileType liquid setlocal spell textwidth=80
 autocmd FileType vimwiki setlocal spell textwidth=80
 autocmd Filetype cucumber setlocal spell
 autocmd Filetype gitcommit setlocal spell textwidth=72
+autocmd Filetype apiblueprint setlocal spell textwidth=80 tabstop=4 softtabstop=4 shiftwidth=4
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
