@@ -145,7 +145,8 @@ let g:ctrlp_map = '<Leader>t'
 let g:ctrlp_cmd = 'CtrlPLastMode'
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|\cache|\tmp$'
-let g:ctrlp_extensions = ['tag', 'buffertag']
+let g:ctrlp_extensions = ['tag']
+nmap <Leader>b :CtrlPBuffer<CR>
 
 " tagbar settings
 let g:tagbar_usearrows = 1
