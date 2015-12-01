@@ -63,6 +63,8 @@ set pastetoggle=<F2>
 " Makefile uses real tabs
 autocmd FileType make set noexpandtab
 
+set spell
+
 " Set extra filetype extensions
 autocmd BufNewFile,BufRead *.json set ft=javascript
 autocmd BufNewFile,BufRead *.hamlc,*.hamlc.erb set ft=haml
