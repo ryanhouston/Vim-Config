@@ -91,8 +91,6 @@ nnoremap <leader><leader> <c-^>
 
 " Fold settings
 set foldmethod=indent
-set foldnestmax=10
-set foldcolumn=4
 set nofoldenable
 
 set autoread
