@@ -134,6 +134,12 @@ nmap <Down> <C-e>
 nmap <Leader>j :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 nmap <C-\> :pop<CR>
 
+" netrw settings
+"let g:netrw_liststyle=3
+let g:netrw_browse_split=4
+let g:netrw_preview=1
+let g:netrw_winsize=20
+
 " Gist Options
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
