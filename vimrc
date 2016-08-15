@@ -158,12 +158,12 @@ nnoremap <leader>l :TagbarToggle<CR>
 
 " vimwiki settings
 let main_wiki = {
-  \ 'path':   '~/sync/Documents/wiki/',
+  \ 'path':   '~/sync/Documents/notes/wiki/',
   \ 'syntax': 'markdown',
   \ 'ext':    '.md' }
 
 let culturalist_wiki = {
-  \ 'path':   '~/sync/Documents/culturalist_wiki/',
+  \ 'path':   '~/sync/Documents/notes/culturalist_wiki/',
   \ 'syntax': 'markdown',
   \ 'ext':    '.md' }
 
