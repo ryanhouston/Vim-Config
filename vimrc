@@ -95,13 +95,11 @@ set nofoldenable
 
 set autoread
 
-set term=screen-256color
-let g:solarized_termcolors=16
-set background=dark
-colorscheme solarized
-
-"colorscheme railscasts2
-"colorscheme osx_like
+set t_Co=16
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 
 set guifont=Ubuntu\ Mono\ 9
 
