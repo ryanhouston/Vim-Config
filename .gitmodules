@@ -10,9 +10,6 @@
 [submodule "bundle/ctrlp.vim"]
   path = bundle/ctrlp.vim
   url = git://github.com/kien/ctrlp.vim
-[submodule "bundle/vim-colors-solarized"]
-	path = bundle/vim-colors-solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/webapi-vim"]
 	path = bundle/webapi-vim
 	url = git://github.com/mattn/webapi-vim.git
@@ -43,9 +40,6 @@
 [submodule "bundle/vim-liquid"]
 	path = bundle/vim-liquid
 	url = https://github.com/tpope/vim-liquid
-[submodule "bundle/mustache"]
-	path = bundle/mustache
-	url = https://github.com/mustache/vim-mustache-handlebars
 [submodule "bundle/base16-vim"]
 	path = bundle/base16-vim
 	url = https://github.com/chriskempson/base16-vim.git
