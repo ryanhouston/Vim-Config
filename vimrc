@@ -1,9 +1,3 @@
-" This line should not be removed as it ensures that various options are
-" properly set to work with the Vim-related packages available in Debian.
-"runtime! debian.vim
-" ^ was all here from install. caused issues with solarized when reloading
-" .vimrc
-
 set nocompatible
 
 call pathogen#infect()
@@ -18,54 +12,47 @@ endif
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
-" Enable syntax highlighting
+let mapleader = ","
 syntax on
-
-" Jump to last line when the file was last loaded
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-endif
-
 filetype plugin indent on
-
-set cursorline
-set exrc        " enable per-directory .vimrc files
-set secure      " disable unsafe commands in local .vimrc files
-
-set showmode
-set showcmd     " Show (partial) command in status line.
+set autoread
 set autowrite   " Automatically save before commands like :next and :make
+set backspace=indent,eol,start " allow backspacing over everything in insert mode
+set colorcolumn=80,120 " Mark column widths
+set cursorline
+set encoding=utf8
+set exrc " enable per-directory .vimrc files
+set guifont=Ubuntu\ Mono\ 9
+set hidden
+set laststatus=2 " Status bar
+set mouse=a " Enable mouse usage (all modes)
+set nowrap
+set pastetoggle=<F2>
+set scrolloff=3
+set secure " disable unsafe commands in local .vimrc files
+set showcmd " Show (partial) command in status line.
+set showmode
+set spell
+set title
 
 " Searching
 set ignorecase " Do case insensitive matching
-set smartcase " Do smart case matching
-set incsearch " Incremental search
-set hlsearch  " Highlight matching search terms
+set smartcase  " Do smart case matching
+set incsearch  " Incremental search
+set hlsearch   " Highlight matching search terms
 set showmatch   " Show matching brackets.
 nmap <silent> ,/ :nohlsearch<CR>
 
-set hidden
-set title
-set scrolloff=3
-set encoding=utf8
-set nowrap
-
-" tab settings
+" Tab settings
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
 set autoindent
 set copyindent
+autocmd FileType make set noexpandtab " Makefile uses real tabs
 
-set pastetoggle=<F2>
-
-" Makefile uses real tabs
-autocmd FileType make set noexpandtab
-
-set spell
-
-" Set extra filetype extensions
+" Extra filetype options
 autocmd BufNewFile,BufRead *.json set ft=javascript
 autocmd BufNewFile,BufRead *.hamlc,*.hamlc.erb set ft=haml
 autocmd FileType markdown setlocal spell textwidth=80
@@ -73,54 +60,34 @@ autocmd FileType liquid setlocal spell textwidth=80
 autocmd FileType vimwiki setlocal spell textwidth=80
 autocmd Filetype cucumber setlocal spell
 autocmd Filetype gitcommit setlocal spell textwidth=72
-autocmd Filetype apiblueprint setlocal spell textwidth=80 tabstop=4 softtabstop=4 shiftwidth=4
-
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
 
 " Line numbers
 set ruler
 set number
 set numberwidth=4
-let mapleader = ","
 nmap <Leader>n :set number! :set number?<CR>
 nmap <Leader>rn :set relativenumber<CR>
-
-" Switch between last buffer
-nnoremap <leader><leader> <c-^>
 
 " Fold settings
 set foldmethod=indent
 set nofoldenable
 
-set autoread
-
+" Colorscheme
 set t_Co=16
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
 
-set guifont=Ubuntu\ Mono\ 9
-
+" Visualize tabs and trailing spaces
 highlight ExtraWhitespace ctermbg=red guibg=purple
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
-
-" Visualize tabs and trailing spaces
 set list
 set listchars=tab:>-,trail:-
-
-" Mark column widths
-set colorcolumn=80,120
-
-" Status bar
-set laststatus=2
-
-set mouse=a   " Enable mouse usage (all modes)
 
 " Window scrolling
 nmap <Right> z<Right>
@@ -128,9 +95,17 @@ nmap <Left> z<Left>
 nmap <Up> <C-y>
 nmap <Down> <C-e>
 
-" tag navigation
+" Tag navigation
 nmap <Leader>j :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 nmap <C-\> :pop<CR>
+
+" Jump to last line when the file was last loaded
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
+" Switch between last buffer
+nnoremap <leader><leader> <c-^>
 
 " netrw settings
 "let g:netrw_liststyle=3
