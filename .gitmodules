@@ -64,3 +64,6 @@
 [submodule "bundle/html5"]
 	path = bundle/html5
 	url = https://github.com/othree/html5.vim
+[submodule "bundle/matchit"]
+	path = bundle/matchit
+	url = https://github.com/tmhedberg/matchit
