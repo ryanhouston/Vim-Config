@@ -142,7 +142,12 @@ let culturalist_wiki = {
   \ 'syntax': 'markdown',
   \ 'ext':    '.md' }
 
-let g:vimwiki_list = [main_wiki, culturalist_wiki]
+let contactually_wiki = {
+  \ 'path':   '~/sync/Documents/notes/contactually_wiki/',
+  \ 'syntax': 'markdown',
+  \ 'ext':    '.md' }
+
+let g:vimwiki_list = [main_wiki, culturalist_wiki, contactually_wiki]
 let g:vimwiki_ext2syntax = {}
 let g:vimwiki_global_ext = 0
 
