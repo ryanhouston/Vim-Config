@@ -122,6 +122,7 @@ let g:gist_open_browser_after_post = 1
 " Start CtrlP like Command-T
 let g:ctrlp_map = '<Leader>t'
 let g:ctrlp_cmd = 'CtrlPLastMode'
+let g:ctrlp_working_path_mode = 0
 let g:ctrlp_custom_ignore = {
   \ 'dir': '\v[\/](cache|tmp|node_modules)$',
   \}
