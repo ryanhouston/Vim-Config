@@ -67,6 +67,7 @@ set number
 set numberwidth=4
 nmap <Leader>n :set number! :set number?<CR>
 nmap <Leader>rn :set relativenumber<CR>
+nmap <Leader>nr :set norelativenumber<CR>
 
 " Fold settings
 set foldmethod=indent
