@@ -124,7 +124,7 @@ let g:ctrlp_map = '<Leader>t'
 let g:ctrlp_cmd = 'CtrlPLastMode'
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_custom_ignore = {
-  \ 'dir': '\v[\/](cache|tmp|node_modules)$',
+  \ 'dir': '\v[\/](cache|tmp|node_modules|coverage)$',
   \}
 let g:ctrlp_extensions = ['tag']
 nmap <Leader>b :CtrlPBuffer<CR>
