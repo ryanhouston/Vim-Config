@@ -34,6 +34,7 @@ set showcmd " Show (partial) command in status line.
 set showmode
 set spell
 set title
+set omnifunc=syntaxcomplete#Complete
 
 " Searching
 set ignorecase " Do case insensitive matching
