@@ -114,6 +114,7 @@ let g:netrw_liststyle=3
 "let g:netrw_browse_split=4
 let g:netrw_preview=1
 let g:netrw_winsize=25
+nnoremap <leader>f :Vexplore<CR>
 
 " Gist Options
 let g:gist_detect_filetype = 1
