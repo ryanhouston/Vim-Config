@@ -159,6 +159,9 @@ let g:vimwiki_global_ext = 0
 " Ack.vim
 let g:ackhighlight = 1
 
+" Syntastic
+let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
