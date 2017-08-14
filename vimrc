@@ -98,7 +98,7 @@ nmap <Up> <C-y>
 nmap <Down> <C-e>
 
 " Tag navigation
-nmap <Leader>j :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+nmap <Leader>j :tab split<CR>:exec("tjump ".expand("<cword>"))<CR>
 nmap <C-\> :pop<CR>
 
 " Jump to last line when the file was last loaded
