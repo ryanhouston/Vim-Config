@@ -80,7 +80,6 @@ if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
-hi Search cterm=NONE ctermfg=black
 
 " Visualize tabs and trailing spaces
 highlight ExtraWhitespace ctermbg=red guibg=purple
