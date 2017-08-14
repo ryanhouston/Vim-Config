@@ -160,6 +160,13 @@ let g:ackhighlight = 1
 
 " Syntastic
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+let g:syntastic_javascript_checkers = ['eslint']
+
+" vim-javascript
+let g:javascript_plugin_jsdoc = 1
+
+" vim-jsx
+let g:jsx_ext_required = 0
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
