@@ -155,6 +155,11 @@ let g:vimwiki_ext2syntax = {}
 let g:vimwiki_global_ext = 0
 
 
+" vim-markdown
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_toc_autofit = 1
+let g:vim_markdown_no_extensions_in_markdown = 1
+
 " Ack.vim
 let g:ackhighlight = 1
 
