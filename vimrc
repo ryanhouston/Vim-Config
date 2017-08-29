@@ -1,7 +1,37 @@
 set nocompatible
 
-call pathogen#infect()
-call pathogen#helptags()
+call plug#begin('~/.vim/plugged')
+
+Plug 'airblade/vim-gitgutter'
+Plug 'chriskempson/base16-vim'
+Plug 'ervandew/supertab'
+Plug 'kchmck/vim-coffee-script'
+Plug 'kien/ctrlp.vim'
+Plug 'leshill/vim-json'
+Plug 'majutsushi/tagbar'
+Plug 'mattn/webapi-vim'
+Plug 'mattn/gist-vim'
+Plug 'mileszs/ack.vim'
+Plug 'mxw/vim-jsx'
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'plasticboy/vim-markdown'
+Plug 'skammer/vim-css-color'
+Plug 'tmhedberg/matchit'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-cucumber', { 'for': 'cucumber' }
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-haml'
+Plug 'tpope/vim-liquid'
+Plug 'tpope/vim-obsession'
+Plug 'tpope/vim-rails'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-ruby/vim-ruby'
+Plug 'vimwiki/vimwiki'
+Plug 'vim-syntastic/syntastic'
+
+call plug#end()
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
