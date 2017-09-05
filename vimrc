@@ -30,7 +30,7 @@ Plug 'tpope/vim-rhubarb'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vimwiki/vimwiki'
-Plug 'vim-syntastic/syntastic'
+Plug 'w0rp/ale'
 
 call plug#end()
 
@@ -183,10 +183,6 @@ let g:vim_markdown_no_extensions_in_markdown = 1
 
 " Ack.vim
 let g:ackhighlight = 1
-
-" Syntastic
-let g:syntastic_ruby_checkers = ['mri', 'rubocop']
-let g:syntastic_javascript_checkers = ['eslint']
 
 " vim-javascript
 let g:javascript_plugin_jsdoc = 1
