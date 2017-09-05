@@ -5,8 +5,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'chriskempson/base16-vim'
 Plug 'ervandew/supertab'
+Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do' : './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'kchmck/vim-coffee-script'
-Plug 'kien/ctrlp.vim'
 Plug 'leshill/vim-json'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/webapi-vim'
@@ -149,16 +150,6 @@ nnoremap <leader>f :Vexplore<CR>
 " Gist Options
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
-
-" Start CtrlP like Command-T
-let g:ctrlp_map = '<Leader>t'
-let g:ctrlp_cmd = 'CtrlPLastMode'
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_custom_ignore = {
-  \ 'dir': '\v[\/](cache|tmp|node_modules|coverage)$',
-  \}
-let g:ctrlp_extensions = ['tag']
-nmap <Leader>b :CtrlPBuffer<CR>
 
 " tagbar settings
 let g:tagbar_usearrows = 1
