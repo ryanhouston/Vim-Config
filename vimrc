@@ -184,6 +184,9 @@ let g:vim_markdown_no_extensions_in_markdown = 1
 
 " Ack.vim
 let g:ackhighlight = 1
+" use faster silversearcher-ag instead of ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 
 " vim-javascript
 let g:javascript_plugin_jsdoc = 1
