@@ -33,6 +33,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vimwiki/vimwiki'
 Plug 'w0rp/ale'
+Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
