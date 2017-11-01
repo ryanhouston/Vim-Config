@@ -100,8 +100,8 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 " Line numbers
 set ruler
 set number
+set relativenumber
 set numberwidth=4
-nmap <Leader>n :set number! :set number?<CR>
 nmap <Leader>rn :set relativenumber<CR>
 nmap <Leader>nr :set norelativenumber<CR>
 
