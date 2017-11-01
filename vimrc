@@ -6,6 +6,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'chriskempson/base16-vim'
 Plug 'danchoi/ri.vim'
 Plug 'ervandew/supertab'
+Plug 'haya14busa/incsearch.vim'
 Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do' : './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'kchmck/vim-coffee-script'
@@ -219,3 +220,18 @@ let g:ale_sign_warning = '⚠'
 let g:ale_echo_msg_warning_str = '⚠ Warning'
 let g:ale_echo_msg_error_str = '✗ Error'
 let g:ale_echo_msg_format = '[%linter% %severity%] %s'
+
+" indentLines
+let g:indentLine_enabled = 0
+
+" incsearch
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
