@@ -126,12 +126,6 @@ autocmd BufWinLeave * call clearmatches()
 set list
 set listchars=tab:>-,trail:-
 
-" Window scrolling
-nmap <Right> z<Right>
-nmap <Left> z<Left>
-nmap <Up> <C-y>
-nmap <Down> <C-e>
-
 " Tag navigation
 nmap <Leader>j :tab split<CR>:exec("tjump ".expand("<cword>"))<CR>
 nmap <C-\> :pop<CR>
