@@ -33,7 +33,6 @@ Plug 'tpope/vim-rhubarb'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-ruby/vim-ruby'
-Plug 'vimwiki/vimwiki'
 Plug 'w0rp/ale'
 Plug 'Yggdroot/indentLine'
 
@@ -63,6 +62,7 @@ set autoread
 set autowrite   " Automatically save before commands like :next and :make
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set colorcolumn=80,120 " Mark column widths
+set conceallevel=2 " allows syntax files to hide formatting characters
 set cursorline
 set encoding=utf8
 set exrc " enable per-directory .vimrc files
@@ -102,7 +102,6 @@ autocmd BufNewFile,BufRead *.json set ft=javascript
 autocmd BufNewFile,BufRead *.hamlc,*.hamlc.erb set ft=haml
 autocmd FileType markdown setlocal spell textwidth=80
 autocmd FileType liquid setlocal spell textwidth=80
-autocmd FileType vimwiki setlocal spell textwidth=80
 autocmd Filetype cucumber setlocal spell
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
@@ -162,31 +161,21 @@ let g:gist_open_browser_after_post = 1
 let g:tagbar_usearrows = 1
 nnoremap <leader>l :TagbarToggle<CR>
 
-" vimwiki settings
-let main_wiki = {
-  \ 'path':   '~/sync/Documents/notes/wiki/',
-  \ 'syntax': 'markdown',
-  \ 'ext':    '.md' }
-
-let culturalist_wiki = {
-  \ 'path':   '~/sync/Documents/notes/culturalist_wiki/',
-  \ 'syntax': 'markdown',
-  \ 'ext':    '.md' }
-
-let contactually_wiki = {
-  \ 'path':   '~/sync/Documents/notes/contactually_wiki/',
-  \ 'syntax': 'markdown',
-  \ 'ext':    '.md' }
-
-let g:vimwiki_list = [main_wiki, culturalist_wiki, contactually_wiki]
-let g:vimwiki_ext2syntax = {}
-let g:vimwiki_global_ext = 0
-
+" Notes / Simple Markdown Wiki helpers
+" I should really learn some vimscript
+nnoremap <leader>1ww :e ~/sync/Documents/notes/wiki/index.md<CR> :cd %:p:h<CR>
+nnoremap <leader>1wt :tabnew ~/sync/Documents/notes/wiki/index.md<CR> :cd %:p:h<CR>
+nnoremap <leader>2ww :e ~/sync/Documents/notes/contactually_wiki/index.md<CR> :cd %:p:h<CR>
+nnoremap <leader>2wt :tabnew ~/sync/Documents/notes/contactually_wiki/index.md<CR> :cd %:p:h<CR>
+" allow space as valid filename character. Allows use of `gf` type commands
+" when cursor is over a markdown link like [This link](Link to a file.md)
+set isfname+=32
+nnoremap <leader>dp "=strftime("%Y-%m-%d")<CR>p
+nnoremap <leader>dP "=strftime("%Y-%m-%d")<CR>P
 
 " vim-markdown
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_toc_autofit = 1
-let g:vim_markdown_no_extensions_in_markdown = 1
 
 " Ack.vim
 let g:ackhighlight = 1
