@@ -37,6 +37,14 @@ Plug 'vimwiki/vimwiki'
 Plug 'w0rp/ale'
 Plug 'Yggdroot/indentLine'
 
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
 call plug#end()
 
 " Source a global configuration file if available
@@ -231,3 +239,5 @@ map *  <Plug>(incsearch-nohl-*)
 map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
+
+let g:deoplete#enable_at_startup = 1
