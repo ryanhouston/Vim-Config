@@ -19,6 +19,7 @@ Plug 'mxw/vim-jsx'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'plasticboy/vim-markdown'
+Plug 'sheerun/vim-yardoc'
 Plug 'tmhedberg/matchit'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-cucumber', { 'for': 'cucumber' }
