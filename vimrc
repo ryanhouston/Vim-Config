@@ -159,6 +159,7 @@ let g:gist_open_browser_after_post = 1
 
 " tagbar settings
 let g:tagbar_usearrows = 1
+let g:tagbar_sort = 0
 nnoremap <leader>l :TagbarToggle<CR>
 
 " Notes / Simple Markdown Wiki helpers
