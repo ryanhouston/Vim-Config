@@ -231,3 +231,4 @@ map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
 
 let g:deoplete#enable_at_startup = 1
+let deoplete#tag#cache_limit_size = 50000000
