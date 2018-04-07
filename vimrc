@@ -71,6 +71,7 @@ set encoding=utf8
 set exrc " enable per-directory .vimrc files
 set guifont=Ubuntu\ Mono\ 9
 set hidden
+set iskeyword+=-
 set laststatus=2 " Status bar
 set mouse=a " Enable mouse usage (all modes)
 set nowrap
