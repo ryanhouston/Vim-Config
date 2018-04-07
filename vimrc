@@ -197,6 +197,8 @@ let g:jsx_ext_required = 0
 
 " vim-airline
 let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#ale#warning_symbol = '⚠'
+let g:airline#extensions#ale#error_symbol = '✗'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_section_z = airline#section#create(['%{ObsessionStatus(''$'', '''')}', 'windowswap', '%3p%% ', 'linenr', ':%3v '])
@@ -219,6 +221,12 @@ let g:ale_sign_warning = '⚠'
 let g:ale_echo_msg_warning_str = '⚠ Warning'
 let g:ale_echo_msg_error_str = '✗ Error'
 let g:ale_echo_msg_format = '[%linter% %severity%] %s'
+let g:ale_fixers = {
+\   'ruby': ['rubocop'],
+\}
+let g:ale_linters = {
+\   'ruby': ['rubocop', 'ruby'],
+\}
 
 " indentLines
 let g:indentLine_enabled = 0
