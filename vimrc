@@ -205,6 +205,7 @@ let g:airline_section_z = airline#section#create(['%{ObsessionStatus(''$'', ''''
 
 " fzf
 nmap <leader>t :Files<CR>
+nmap <leader>b :Buffers<CR>
 function! s:fzf_statusline()
   " Override statusline as you like
   highlight fzf1 ctermfg=161 ctermbg=251
