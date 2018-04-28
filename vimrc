@@ -150,6 +150,9 @@ endif
 " Switch between last buffer
 nnoremap <leader><leader> <c-^>
 
+" Map `:w!!` to save with sudo when file is 'readonly'
+cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
+
 " netrw settings
 let g:netrw_liststyle=3
 "let g:netrw_browse_split=4
