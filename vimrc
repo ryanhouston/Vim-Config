@@ -1,5 +1,9 @@
 set nocompatible
 
+"#########
+" Plugins
+"#########
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
@@ -48,6 +52,10 @@ else
 endif
 
 call plug#end()
+
+"#########
+" General
+"#########
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
@@ -153,24 +161,36 @@ nnoremap <leader><leader> <c-^>
 " Map `:w!!` to save with sudo when file is 'readonly'
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
+"############
 " netrw settings
+"############
+
 let g:netrw_liststyle=3
 "let g:netrw_browse_split=4
 let g:netrw_preview=1
 let g:netrw_winsize=25
 nnoremap <leader>f :Vexplore<CR>
 
+"############
 " Gist Options
+"############
+
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
 
+"############
 " tagbar settings
+"############
+
 let g:tagbar_usearrows = 1
 let g:tagbar_sort = 0
 nnoremap <leader>l :TagbarToggle<CR>
 
+"############
 " Notes / Simple Markdown Wiki helpers
 " I should really learn some vimscript
+"############
+"
 nnoremap <leader>1ww :e ~/sync/Documents/notes/wiki/index.md<CR> :lcd %:p:h<CR>
 nnoremap <leader>1wt :tabnew ~/sync/Documents/notes/wiki/index.md<CR> :lcd %:p:h<CR>
 nnoremap <leader>2ww :e ~/sync/Documents/notes/contactually_wiki/index.md<CR> :lcd %:p:h<CR>
@@ -181,24 +201,39 @@ set isfname+=32
 nnoremap <leader>dp "=strftime("%Y-%m-%d")<CR>p
 nnoremap <leader>dP "=strftime("%Y-%m-%d")<CR>P
 
+"############
 " vim-markdown
+"############
+
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_toc_autofit = 1
 let g:vim_markdown_new_list_item_indent = 2
 
+"############
 " Ack.vim
+"############
+
 let g:ackhighlight = 1
 " use faster silversearcher-ag instead of ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
 
+"############
 " vim-javascript
+"############
+
 let g:javascript_plugin_jsdoc = 1
 
+"############
 " vim-jsx
+"############
+
 let g:jsx_ext_required = 0
 
+"############
 " vim-airline
+"############
+
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#ale#warning_symbol = '⚠'
 let g:airline#extensions#ale#error_symbol = '✗'
@@ -206,7 +241,10 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_section_z = airline#section#create(['%{ObsessionStatus(''$'', '''')}', 'windowswap', '%3p%% ', 'linenr', ':%3v '])
 
+"############
 " fzf
+"############
+
 nmap <leader>t :Files<CR>
 nmap <leader>b :Buffers<CR>
 function! s:fzf_statusline()
@@ -219,7 +257,10 @@ endfunction
 
 autocmd! User FzfStatusLine call <SID>fzf_statusline()"
 
+"############
 " ale
+"############
+
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '⚠'
 let g:ale_echo_msg_warning_str = '⚠ Warning'
@@ -232,10 +273,16 @@ let g:ale_linters = {
 \   'ruby': ['rubocop', 'ruby'],
 \}
 
+"############
 " indentLines
+"############
+
 let g:indentLine_enabled = 0
 
+"############
 " incsearch
+"############
+
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
@@ -246,6 +293,10 @@ map *  <Plug>(incsearch-nohl-*)
 map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
+
+"##########
+" deoplete
+"##########
 
 let g:deoplete#enable_at_startup = 1
 let deoplete#tag#cache_limit_size = 50000000
