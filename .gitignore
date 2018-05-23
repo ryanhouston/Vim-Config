@@ -4,3 +4,4 @@ bundle/*/doc/tags
 spell/*
 tags/*
 plugged
+autoload/plug.vim.old
