@@ -96,8 +96,6 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
-set list
-set listchars=tab:>-,trail:-
 
 " Tag navigation
 nmap <Leader>j :tab split<CR>:exec("tjump ".expand("<cword>"))<CR>
