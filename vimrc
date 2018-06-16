@@ -62,6 +62,15 @@ set autoindent
 set copyindent
 autocmd FileType make set noexpandtab " Makefile uses real tabs
 
+" Visualize tabs and trailing spaces
+highlight ExtraWhitespace ctermbg=red guibg=purple
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+set list
+
 " Extra filetype options
 autocmd BufNewFile,BufRead *.json set ft=javascript
 autocmd BufNewFile,BufRead *.hamlc,*.hamlc.erb set ft=haml
@@ -69,6 +78,7 @@ autocmd FileType markdown setlocal spell textwidth=80
 autocmd FileType liquid setlocal spell textwidth=80
 autocmd Filetype cucumber setlocal spell
 autocmd Filetype gitcommit setlocal spell textwidth=72
+autocmd Filetype go setlocal nolist
 
 " Line numbers
 set ruler
@@ -83,19 +93,11 @@ set foldmethod=indent
 set nofoldenable
 
 " Colorscheme
-set t_Co=16
+"set t_Co=16
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
-
-" Visualize tabs and trailing spaces
-highlight ExtraWhitespace ctermbg=red guibg=purple
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
 
 " Tag navigation
 nmap <Leader>j :tab split<CR>:exec("tjump ".expand("<cword>"))<CR>
@@ -119,7 +121,7 @@ cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 let g:netrw_preview=1
 let g:netrw_liststyle=3
 let g:netrw_winsize=30
-nnoremap <leader>f :Vexplore<CR>
+nnoremap <leader>f :Explore<CR>
 
 "############
 " Gist Options
