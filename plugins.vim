@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'chriskempson/base16-vim'
 Plug 'danchoi/ri.vim'
+Plug 'edkolev/tmuxline.vim'
 Plug 'ervandew/supertab'
 Plug 'fatih/vim-go'
 Plug 'haya14busa/incsearch.vim'
