@@ -6,6 +6,7 @@ Plug 'danchoi/ri.vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'ervandew/supertab'
 Plug 'fatih/vim-go'
+Plug 'godlygeek/tabular'
 Plug 'haya14busa/incsearch.vim'
 Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do' : './install --all' }
 Plug 'junegunn/fzf.vim'
