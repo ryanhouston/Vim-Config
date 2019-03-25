@@ -74,11 +74,11 @@ set list
 " Extra filetype options
 autocmd BufNewFile,BufRead *.json set ft=javascript
 autocmd BufNewFile,BufRead *.hamlc,*.hamlc.erb set ft=haml
-autocmd FileType markdown setlocal spell textwidth=80
+autocmd FileType markdown setlocal spell wrap textwidth=80
 autocmd FileType liquid setlocal spell textwidth=80
 autocmd Filetype cucumber setlocal spell
 autocmd Filetype gitcommit setlocal spell textwidth=72
-autocmd Filetype go setlocal nolist
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
 
 " Line numbers
 set ruler
@@ -98,6 +98,7 @@ if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
+hi SpellBad cterm=underline,bold ctermfg=red ctermbg=none
 
 " Tag navigation
 nmap <Leader>j :tab split<CR>:exec("tjump ".expand("<cword>"))<CR>
