@@ -193,6 +193,7 @@ let g:airline#extensions#ale#error_symbol = '✗'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_section_z = airline#section#create(['%{ObsessionStatus(''$'', '''')}', 'windowswap', '%3p%% ', 'linenr', ':%3v '])
+highlight ALEWarning ctermbg=DarkMagenta ctermfg=black
 
 "############
 " fzf
@@ -213,6 +214,9 @@ let g:ale_echo_msg_format = '[%linter% %severity%] %s'
 let g:ale_fixers = {
 \   'ruby': ['rubocop'],
 \}
+"let g:ale_linters = {
+"\   'ruby': ['reek', 'rubocop', 'ruby'],
+"\}
 let g:ale_linters = {
 \   'ruby': ['rubocop', 'ruby'],
 \}
