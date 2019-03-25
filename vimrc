@@ -268,3 +268,29 @@ xmap <C-k>     <Plug>(neosnippet_expand_target)
 " \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+
+"#########
+" sessions
+"#########
+
+function! MkBranchSession()
+  let l:branchName = FugitiveHead()
+  let sessionFile = substitute(l:branchName, "/", "-", "") . ".vim"
+  execute "mksession! " .sessionFile
+endfunction
+command! MkBranchSession call MkBranchSession()
+
+
+"#########
+" tabular
+"#########
+nmap <leader>a= :Tabularize /=<CR>
+vmap <leader>a= :Tabularize /=<CR>
+nmap <leader>ah :Tabularize /=><CR>
+vmap <leader>ah :Tabularize /=><CR>
+
+"###############
+" editorconfig
+"###############
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
