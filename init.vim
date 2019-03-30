@@ -191,10 +191,10 @@ let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#ale#warning_symbol = '⚠'
 let g:airline#extensions#ale#error_symbol = '✗'
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
 let g:airline_section_z = airline#section#create(['%{ObsessionStatus(''$'', '''')}', 'windowswap', '%3p%% ', 'linenr', ':%3v '])
 highlight ALEWarning ctermbg=DarkMagenta ctermfg=black
 
+let g:tmuxline_powerline_separators = 0
 "############
 " fzf
 "############
