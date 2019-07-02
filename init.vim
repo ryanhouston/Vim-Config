@@ -294,3 +294,47 @@ vmap <leader>ah :Tabularize /=><CR>
 " editorconfig
 "###############
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+"########
+" vim-go
+"########
+
+" Extra syntax highlighting
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_function_parameters = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_string_spellcheck = 1
+let g:go_highlight_types = 1
+let g:go_highlight_variable_names = 1
+let g:go_highlight_variable_declarations = 1
+let g:go_highlight_variable_assignments = 1
+let g:go_auto_sameids = 1
+
+" Auto formatting
+let g:go_fmt_options = '-s'
+
+" Linting
+let g:go_metalinter_autosave = 1
+let g:go_metalinter_autosave_enabled = ['gotype', 'gofmt', 'deadcode', 'vetshadow', 'gosimple', 'goconst', 'errcheck']
+let g:go_metalinter_command = "gometalinter --disable-all --line-length=100 --min-const-length=10
+\ -E gotype -E gofmt -E deadcode -E vetshadow -E gosimple -E goconst -E errcheck
+\ -e 'error return value not checked.*\.Close\('
+\ -e '\"err\" shadows declaration'"
+let g:go_metalinter_deadline = '60s'
+let g:go_metalinter_enabled = ['gotype', 'gofmt', 'deadcode', 'vetshadow', 'gosimple', 'goconst', 'errcheck']
+
+" Show type hinting in statusline
+let g:go_auto_type_info = 0
+let g:go_info_mode = 'guru'
+
+" Golang key-mappings
+" Switch between code and test files
+autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
+autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
+autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
+autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+
+nmap <leader>gi <Plug>(go-info)

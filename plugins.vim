@@ -5,7 +5,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'danchoi/ri.vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'ervandew/supertab'
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'godlygeek/tabular'
 Plug 'haya14busa/incsearch.vim'
 Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do' : './install --all' }
@@ -43,6 +43,7 @@ Plug 'Yggdroot/indentLine'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
 else
   Plug 'Shougo/deoplete.nvim'
   Plug 'roxma/nvim-yarp'
