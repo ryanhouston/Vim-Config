@@ -212,12 +212,12 @@ let g:ale_echo_msg_format = '[%linter% %severity%] %s'
 let g:ale_fixers = {
 \   'ruby': ['rubocop'],
 \}
-"let g:ale_linters = {
-"\   'ruby': ['reek', 'rubocop', 'ruby'],
-"\}
 let g:ale_linters = {
 \   'ruby': ['rubocop', 'ruby'],
+\   'go': ['golangci-lint', 'gobuild', 'gofmt'],
 \}
+
+let g:ale_thrift_thrift_includes = ['~/development/urbancompass/src/thrift/urbancompass/', '.']
 
 "############
 " indentLines
