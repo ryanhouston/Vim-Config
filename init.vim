@@ -310,23 +310,21 @@ let g:go_highlight_variable_names = 1
 let g:go_highlight_variable_declarations = 1
 let g:go_highlight_variable_assignments = 1
 let g:go_auto_sameids = 1
+let g:go_auto_info = 1
 
 " Auto formatting
 let g:go_fmt_options = '-s'
+let g:go_fmt_experimental = 1 " preserves folds on save
 
 " Linting
-let g:go_metalinter_autosave = 1
-let g:go_metalinter_autosave_enabled = ['gotype', 'gofmt', 'deadcode', 'vetshadow', 'gosimple', 'goconst', 'errcheck']
-let g:go_metalinter_command = "gometalinter --disable-all --line-length=100 --min-const-length=10
-\ -E gotype -E gofmt -E deadcode -E vetshadow -E gosimple -E goconst -E errcheck
-\ -e 'error return value not checked.*\.Close\('
-\ -e '\"err\" shadows declaration'"
-let g:go_metalinter_deadline = '60s'
-let g:go_metalinter_enabled = ['gotype', 'gofmt', 'deadcode', 'vetshadow', 'gosimple', 'goconst', 'errcheck']
+ let g:go_metalinter_autosave = 0
+ let g:go_metalinter_autosave_enabled = ['gofmt', 'deadcode', 'vetshadow', 'gosimple', 'goconst', 'errcheck']
+ let g:go_metalinter_enabled = ['gofmt', 'deadcode', 'vetshadow', 'gosimple', 'goconst', 'errcheck']
 
 " Show type hinting in statusline
-let g:go_auto_type_info = 0
-let g:go_info_mode = 'guru'
+" let g:go_auto_type_info = 1
+ let g:go_info_mode = 'guru'
+ let g:go_def_mode = 'guru'
 
 " Golang key-mappings
 " Switch between code and test files
