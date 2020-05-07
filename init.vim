@@ -142,10 +142,10 @@ nnoremap <leader>l :TagbarToggle<CR>
 " I should really learn some vimscript
 "############
 "
-nnoremap <leader>1ww :e ~/sync/Documents/notes/wiki/index.md<CR> :lcd %:p:h<CR>
-nnoremap <leader>1wt :tabnew ~/sync/Documents/notes/wiki/index.md<CR> :lcd %:p:h<CR>
-nnoremap <leader>2ww :e ~/sync/Documents/notes/contactually_wiki/index.md<CR> :lcd %:p:h<CR>
-nnoremap <leader>2wt :tabnew ~/sync/Documents/notes/contactually_wiki/index.md<CR> :lcd %:p:h<CR>
+nnoremap <leader>1ww :e ~/Dropbox/Wiki/personal/index.md<CR> :lcd %:p:h<CR>
+nnoremap <leader>1wt :tabnew ~/Dropbox/Wiki/personal/index.md<CR> :lcd %:p:h<CR>
+nnoremap <leader>2ww :e ~/Dropbox/Wiki/compass/index.md<CR> :lcd %:p:h<CR>
+nnoremap <leader>2wt :tabnew ~/Dropbox/Wiki/compass/index.md<CR> :lcd %:p:h<CR>
 " allow space as valid filename character. Allows use of `gf` type commands
 " when cursor is over a markdown link like [This link](Link to a file.md)
 set isfname+=32
