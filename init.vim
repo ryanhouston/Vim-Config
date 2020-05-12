@@ -4,7 +4,7 @@ set nocompatible
 " Plugins
 "#########
 
-so ~/.config/nvim/plugins.vim
+source ~/.config/nvim/plugins.vim
 
 "#########
 " General
@@ -113,14 +113,18 @@ nnoremap <leader><leader> <c-^>
 " Map `:w!!` to save with sudo when file is 'readonly'
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
-"############
-" netrw settings
-"############
+" Native fuzzy file finder
+set path+=**
+set wildmenu
+
+" # netrw settings {{{
 
 let g:netrw_preview=1
 let g:netrw_liststyle=3
 let g:netrw_winsize=30
 nnoremap <leader>f :Explore<CR>
+
+"}}}
 
 "############
 " Gist Options
