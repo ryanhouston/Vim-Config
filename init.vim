@@ -70,7 +70,7 @@ autocmd BufWinLeave * call clearmatches()
 set list
 
 " Extra filetype options
-autocmd BufNewFile,BufRead *.json set ft=javascript
+autocmd BufNewFile,BufRead *.avsc set ft=json
 autocmd BufNewFile,BufRead *.hamlc,*.hamlc.erb set ft=haml
 autocmd FileType markdown setlocal spell wrap textwidth=80
 autocmd FileType liquid setlocal spell textwidth=80
