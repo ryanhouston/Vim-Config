@@ -28,6 +28,7 @@ Plug 'solarnz/thrift.vim'
 Plug 'tmhedberg/matchit'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-cucumber', { 'for': 'cucumber' }
+Plug 'tpope/vim-dadbod/'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-haml'
