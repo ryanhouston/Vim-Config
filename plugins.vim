@@ -8,6 +8,7 @@ Plug 'ervandew/supertab'
 "Plug 'fatih/vim-go', { 'tag': 'v1.21', 'do': ':GoUpdateBinaries' }
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'godlygeek/tabular'
+Plug 'gurpreetatwal/vim-avro'
 Plug 'haya14busa/incsearch.vim'
 Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do' : './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -45,6 +46,10 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'w0rp/ale'
 Plug 'Yggdroot/indentLine'
 
+" bazel
+Plug 'google/vim-maktaba'
+Plug 'bazelbuild/vim-bazel'
+
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
@@ -53,6 +58,7 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
+"Plug 'uplus/deoplete-solargraph'
 
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'

@@ -159,9 +159,10 @@ nnoremap <leader>dP "=strftime("%Y-%m-%d")<CR>P
 " vim-markdown
 "############
 
+let g:vim_markdown_follow_anchor = 1
 let g:vim_markdown_frontmatter = 1
-let g:vim_markdown_toc_autofit = 1
 let g:vim_markdown_new_list_item_indent = 2
+let g:vim_markdown_toc_autofit = 1
 
 "############
 " Ack.vim
@@ -192,6 +193,8 @@ let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#ale#warning_symbol = '⚠'
 let g:airline#extensions#ale#error_symbol = '✗'
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tagbar#enabled = 1
+let g:airline#extensions#tagbar#flags = 'f'
 let g:airline_section_z = airline#section#create(['%{ObsessionStatus(''$'', '''')}', 'windowswap', '%3p%% ', 'linenr', ':%3v '])
 highlight ALEWarning ctermbg=DarkMagenta ctermfg=black
 
@@ -300,6 +303,8 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 " vim-go
 "########
 
+call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
+
 let g:go_doc_popup_window = 1
 
 " Extra syntax highlighting
@@ -314,7 +319,7 @@ let g:go_highlight_types = 1
 let g:go_highlight_variable_names = 1
 let g:go_highlight_variable_declarations = 1
 let g:go_highlight_variable_assignments = 1
-" let g:go_auto_sameids = 1
+"let g:go_auto_sameids = 1
 
 " Auto formatting
 let g:go_fmt_command = 'goimports'
@@ -328,9 +333,9 @@ let g:go_metalinter_autosave = 0
 let g:go_metalinter_command='golangci-lint run --build-tags --exclude-use-default'
 
 " Show type hinting in statusline
-" let g:go_auto_type_info = 1
-" let g:go_def_mode = 'guru'
-" let g:go_info_mode = 'guru'
+let g:go_auto_type_info = 1
+
+let g:go_def_mode = 'gopls'
 
 " Golang key-mappings
 " Switch between code and test files
@@ -340,3 +345,6 @@ autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
 autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 
 nmap <leader>gi <Plug>(go-info)
+
+
+let g:ale_java_javac_sourcepath = ['Users/ryanhouston/development/urbancompass/src/java', '$HOME/development/urbancompass/3rdparty', '$HOME/development/urbancompass/build-support/bazel', '$HOME/development/urbancompass/bazel-out/darwin-fastbuild/bin/3rdparty']
