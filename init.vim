@@ -170,7 +170,7 @@ let g:vim_markdown_toc_autofit = 1
 
 let g:ackhighlight = 1
 " use faster silversearcher-ag instead of ack
-let g:ackprg = 'ag --nogroup --nocolor --column'
+let g:ackprg = 'rg --smart-case --no-heading --column'
 
 
 "############
