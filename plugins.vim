@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter', { 'branch': 'main' }
 Plug 'chriskempson/base16-vim'
 Plug 'danchoi/ri.vim'
 Plug 'edkolev/tmuxline.vim'
