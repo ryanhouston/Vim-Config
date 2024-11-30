@@ -7,6 +7,7 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'ervandew/supertab'
 "Plug 'fatih/vim-go', { 'tag': 'v1.21', 'do': ':GoUpdateBinaries' }
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'folke/tokyonight.nvim'
 Plug 'godlygeek/tabular'
 Plug 'gurpreetatwal/vim-avro'
 Plug 'haya14busa/incsearch.vim'

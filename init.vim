@@ -91,6 +91,7 @@ set foldmethod=indent
 set nofoldenable
 
 " Colorscheme
+" colorscheme tokyonight-storm
 "set t_Co=16
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
